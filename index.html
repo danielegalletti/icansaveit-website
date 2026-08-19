@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="refresh" content="0; url=it/index.html" />
+  <link rel="canonical" href="it/index.html" />
+  <title>iCanSaveit</title>
+  <link rel="alternate" hreflang="it" href="it/index.html" />
+  <link rel="alternate" hreflang="en" href="en/index.html" />
+  <link rel="alternate" hreflang="de" href="de/index.html" />
+  <link rel="alternate" hreflang="es" href="es/index.html" />
+  <link rel="alternate" hreflang="fr" href="fr/index.html" />
+  <link rel="alternate" hreflang="pt" href="pt/index.html" />
+  <link rel="alternate" hreflang="x-default" href="it/index.html" />
+</head>
+<body>
+  <p><a href="it/index.html">Continua verso iCanSaveit</a></p>
+  <script>
+    (function () {
+      var supported = ["it", "en", "de", "es", "fr", "pt"];
+      var candidates = navigator.languages && navigator.languages.length
+        ? navigator.languages
+        : [navigator.language || navigator.userLanguage || "it"];
+      var target = "it";
+      for (var i = 0; i < candidates.length; i++) {
+        var code = String(candidates[i]).slice(0, 2).toLowerCase();
+        if (supported.indexOf(code) !== -1) {
+          target = code;
+          break;
+        }
+      }
+      window.location.replace(target + "/index.html");
+    })();
+  </script>
+</body>
+</html>
